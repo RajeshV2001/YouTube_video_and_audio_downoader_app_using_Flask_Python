@@ -1,0 +1,17 @@
+{%extends "base.html" %}
+
+{%block title%}Music Downlaod{%endblock%}
+
+{%block content%}
+ <div class="container">
+ <div class="main">
+
+     <form action="{{url_for('music')}}" onsubmit="{{url_for('music')}}" method="POST">
+         <input type="text" placeholder="Enter URL Here" name='url'>
+         <input type="submit" id="btn">
+     </form>
+ 
+ </div>
+ 
+ </div>
+ {%endblock%}

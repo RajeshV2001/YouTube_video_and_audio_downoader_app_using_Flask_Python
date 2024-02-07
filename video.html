@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Video Downlaod{% endblock %}
+
+{% block content %}
+<div class="container">
+ <div class="main">
+
+     <form action="{{url_for('get')}}" onsubmit="{{url_for('get')}}" method="POST">
+         <input type="text" placeholder="Enter URL Here" name="url">
+         
+
+         <input type="submit" id="btn">
+     </form>
+
+ </div>
+ </div>
+ 
+{% endblock %}

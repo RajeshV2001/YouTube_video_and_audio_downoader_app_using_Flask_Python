@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/base_style.css')}}">
+</head>
+<body>  
+
+    <header class="head">
+        <nav class="nav">   
+           <div class="items">
+                <h2>Welcome</h2>
+               <div class="link">
+                 <a href="{{url_for('index')}}">Home</a>
+                 <a href="{{url_for('get')}}">Video</a>
+                 <a href="{{url_for('music')}}">Audio</a>
+     
+                 </div>
+           </div>
+        </nav>
+    </header>
+    
+    <div class="heading">
+<h1>Download YouTube Videos and Music using Link</h1>
+</div>
+    
+{% block content %}
+
+<div class="icons">
+
+<div class="icon">
+    <a href="{{url_for('video')}}"><img src="/static/css/play.png" alt="Video_Button" width="150px" height="150px"></a>
+</div>
+
+<div class="icon">
+    <a href="{{url_for('music')}}" ><img src="/static/css/audio.png" alt="Audio_Button" width="150px" height="150px"></a>
+</div>
+
+</div>
+
+    
+    {% endblock %}
+
+
+</body>
+</html>

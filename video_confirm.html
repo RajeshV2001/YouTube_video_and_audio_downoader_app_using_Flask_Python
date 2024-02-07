@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{%block content %}
+
+ <div class="container">
+ <div class="main">
+
+     <form action="{{url_for('video')}}" onsubmit="{{url_for('get')}}" method="POST">
+         <input type="text" name="url" value="{{url}}" placeholder="{{url}}">
+         
+         <select name="select" id="sel" >
+               <option selected disabled>Choose Resolution</option>
+               {% for i in lst %}
+               <option value="{{i}}">{{i}}</option>
+               {% endfor %}
+
+
+           </select>
+ 
+         <input type="submit" id="btn">
+     </form>
+
+ </div>
+  </div>
+ 
+{%endblock%}
+
+ 
